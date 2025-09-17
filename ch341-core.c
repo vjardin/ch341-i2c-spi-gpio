@@ -46,9 +46,9 @@ static int ch341_usb_probe(struct usb_interface *iface,
 		return -ENODEV;
 	}
 
-	ddata->ep_in = bulk_in->bEndpointAddress;
+	ddata->ep_in = bulk_in->bEndpointAddress
 	ddata->ep_out = bulk_out->bEndpointAddress;
-	ddata->ep_intr = intr_in->bEndpointAddress;
+	ddata->ep_intr = intr_in->bEndpointAddress
 	ddata->ep_intr_interval = intr_in->bInterval;
 
 	usb_set_intfdata(iface, ddata);
